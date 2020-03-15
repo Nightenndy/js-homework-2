@@ -85,59 +85,22 @@ console.log(weekFn(9));
 console.log(weekFn(1.5));
 console.log(weekFn('2'));
 
-Задание №6
-/*
- * #6
- *
- * создайте функцию ageClassification(n), которая будет в качестве параметра принимать любые числа
- * и возвращать строку согласно следующим условиям, n:
- *           менее 0 – null
- *             0..24 – 'детский возраст'
- *           24+..44 – 'молодой возраст'
- *           44+..65 – 'средний возраст'
- *           65+..75 – 'пожилой возраст'
- *           75+..90 – 'старческий возраст'
- *          90+..122 – 'долгожители'
- *         более 122 – null
- *
- * При выполнении задания допускается использовать только тернарный оператор ?.
- * Использование операторов if, switch – запрещено.
- */
+// Задание №6
 
-// console.log('-1 :', ageClassification(-1)); // -1 : null
+function ageClassification(result) {
+  return result > 0 
+  ? result > 24 ? result > 44 ? result > 65 ? result > 75 ? result > 90 ? result > 122 ? null
+  :'долгожители' : 'старческий возраст': 'пожилой возраст': 'средний возраст': 'молодой возраст': 'детский возраст' : null;
+}
 
-// console.log('5 :', ageClassification(5)); // 5 : детский возраст
-
-// console.log('34 :', ageClassification(34)); // -1 : null
-
-// console.log('50 :', ageClassification(50)); // 50 : средний возраст
-
-// console.log('65.1 :', ageClassification(65.1)); // 65.1 : пожилой возраст
-
-// console.log('80 :', ageClassification(80)); // 80 : старческий возраст
-
-// console.log('110 :', ageClassification(110)); // 110 : долгожители
-
-// console.log('130 :', ageClassification(130)); // 130 : null
-
-/*
- * Блок тестирования:
- * console.log(1, ageClassification(-1) === null);
- * console.log(2, ageClassification(1) === 'детский возраст');
- * console.log(3, ageClassification(24) === 'детский возраст');
- * console.log(4, ageClassification(24.01) === 'молодой возраст');
- * console.log(5, ageClassification(44) === 'молодой возраст');
- * console.log(6, ageClassification(44.01) === 'средний возраст');
- * console.log(7, ageClassification(65) === 'средний возраст');
- * console.log(8, ageClassification(65.01) === 'пожилой возраст');
- * console.log(9, ageClassification(75) === 'пожилой возраст');
- * console.log(10, ageClassification(75.01) === 'старческий возраст');
- * console.log(11, ageClassification(90) === 'старческий возраст');
- * console.log(12, ageClassification(90.01) === 'долгожители');
- * console.log(13, ageClassification(122) === 'долгожители');
- * console.log(14, ageClassification(122.01) === null);
- * console.log(15, ageClassification(150) === null);
- */
+console.log('-1 :', ageClassification(-1));
+console.log('5 :', ageClassification(5));
+console.log('34 :', ageClassification(34));
+console.log('50 :', ageClassification(50));
+console.log('65.1 :', ageClassification(65.1));
+console.log('80 :', ageClassification(80));
+console.log('110 :', ageClassification(110));
+console.log('130 :', ageClassification(130));
 
 /*
  * #7
