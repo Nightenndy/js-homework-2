@@ -10,7 +10,18 @@ var userObj = {
 
 console.log(userObj);
 
+// Задание №2
 
+var userObj = {
+  firstName: 'Anna',
+  lastName: 'Smith',
+  age: 30,
+  fullName() {
+    return `${userObj.firstName} ${userObj.lastName}`;
+  }
+};
+
+console.log(userObj.fullName());
 
 /*
  * #2
