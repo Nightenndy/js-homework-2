@@ -102,6 +102,20 @@ console.log('80 :', ageClassification(80));
 console.log('110 :', ageClassification(110));
 console.log('130 :', ageClassification(130));
 
+// Задание №7
+
+function oddFn(n) {
+  var namb = [];
+  var i = 0;
+  
+  while (i++ < n) if (i % 2 !== 0) namb.push(i);
+
+  return namb;
+}
+
+console.log(oddFn(10));
+console.log(oddFn(15));
+console.log(oddFn(20)); 
 /*
  * #7
  *
