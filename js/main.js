@@ -1,15 +1,16 @@
 console.log('Sample JavaScript #2 HW #16');
 
-/*
- * #1
- *
- * Создайте объект userObj, описывающий человека.
- *
- * Следующие поля обязательны:
- * firstName – любое имя, строка
- * lastName – любая фамилия, строка
- * age – любой возраст, число
- */
+// Задание №1
+
+var userObj = {
+  firstName: 'Anna',
+  lastName: 'Smith',
+  age: 30,
+};
+
+console.log(userObj);
+
+
 
 /*
  * #2
