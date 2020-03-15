@@ -44,57 +44,48 @@ console.log(evenFn(10));
 console.log(evenFn(15));
 console.log(evenFn(20));
 
+// Задание №5
 
-/*
- * #4
- *
- * Создайте функцию evenFn(n), которая принимает параметром число – количество итераций цикла,
- * т.е. for 0..n. Функция должна вернуть массив, состоящий только из четных значений, генерируемых в цикле.
- *
- * Причем:
- * 0 не должен попадать в результирующий массив
- * цикл должен работать до n включительно
- * разрешен только оператор for
- *
- * Например:
- * evenFn(10) → [2, 4, 6, 8, 10]
- * evenFn(15) → [2, 4, 6, 8, 10, 12, 14]
- * evenFn(20) → [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
- */
+function weekFn(week) {
+  var str = '';
 
-// console.log(evenFn(10)); // [2, 4, 6, 8, 10]
+  switch (week) {
+    case 1:
+      str = 'Понедельник';
+      break;
+    case 2:
+      str = 'Вторник';
+      break;
+    case 3:
+      str = 'Среда';
+      break;
+    case 4:
+      str = 'Четверг';
+      break;
+    case 5:
+      str = 'Пятница';
+      break;
+    case 6:
+      str = 'Суббота';
+      break;
+    case 7:
+      str = 'Воскресенье'
+      break;
+    default:
+      str = null;
+  }
 
-// console.log(evenFn(15)); // [2, 4, 6, 8, 10, 12, 14]
+  return str
+}
 
-// console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+console.log(weekFn(1));
+console.log(weekFn(3));
+console.log(weekFn(7));
+console.log(weekFn(9));
+console.log(weekFn(1.5));
+console.log(weekFn('2'));
 
-/*
- * #5
- *
- * Создайте функцию weekFn(n), которая принимает номер дня недели, а возвращает его название.
- * Если вводится строка, любое дробное число или число вне диапазона 1..7 – функция должна вернуть null.
- *
- * Например:
- * 1 → 'Понедельник'
- * 2 → 'Вторник'
- * ...
- * 7 → 'Воскресенье'
- *
- * В реализации функции обязательно должны быть использованы операторы switch / case / default.
- */
-
-// console.log(weekFn(1)); // 'Понедельник'
-
-// console.log(weekFn(3)); // 'Среда'
-
-// console.log(weekFn(7)); // 'Воскресенье'
-
-// console.log(weekFn(9)); // null
-
-// console.log(weekFn(1.5)); // null
-
-// console.log(weekFn('2')); // null
-
+Задание №6
 /*
  * #6
  *
