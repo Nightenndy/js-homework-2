@@ -116,66 +116,29 @@ function oddFn(n) {
 console.log(oddFn(10));
 console.log(oddFn(15));
 console.log(oddFn(20)); 
-/*
- * #7
- *
- * Создайте функцию oddFn(n), которая принимает параметром число – количество итераций цикла.
- * Функция должна вернуть массив, состоящий только из нечетных значений, генерируемых в цикле.
- *
- * Причем:
- * 0 не должен попадать в результирующий массив
- * цикл должен работать до n включительно
- * разрешен только оператор while
- *
- * Например:
- * oddFn(10) → [1, 3, 5, 7, 9]
- * oddFn(15) → [1, 3, 5, 7, 9, 11, 13, 15]
- * oddFn(20) → [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
- */
 
-// console.log(oddFn(10)); // [1, 3, 5, 7, 9]
+// Задание №8
 
-// console.log(oddFn(15)); // [1, 3, 5, 7, 9, 11, 13, 15]
+function mainFunc (a, b, cb) {
+ if (cb && typeof cb === 'function') return cb (a, b)
 
-// console.log(oddFn(20)); // [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+ return false;
+}
 
-/*
- * #8
- *
- * Создайте основную функцию mainFunc(a, b, func), которая принимает три параметра:
- * a – число
- * b - число
- * func –  обрабатывающая параметры a и b, возвратная (callback) функция
- *
- * Реализуйте проверку: если третьим параметром передается не функция, нужно вернуть false.
- *
- */
+function cbRandom (min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-/*
- * реализуйте следующие функции, которые будут осуществлять механизм callback в основной функции,
- * возвращая ей результат собственного вычисления...
- * для возведения в степень и получения произвольного значения можете воспользоваться методами объекта Math.
- */
+function cbPow (num, pow) {
+  return Math.pow(num, pow);
+}
 
-// cbRandom(a, b) – вычисляет и возвращает произвольное целое число в диапазоне между a и b включительно.
+function cbAdd (a, b) {
+  return a + b;
+}
 
-// cbPow(a, b) – вычисляет и возвращает результат возведения числа a в степень b.
 
-// cbAdd(a, b) – вычисляет и возвращает сумму двух чисел a и b.
-
-/*
- * mainFunc() должна возвращать результат работы переданной ей возвратной функции, например:
- * mainFunc(2, 5, cbRandom) → случайно от 2 до 5 включительно
- * mainFunc(10, 30, cbRandom) → случайно 10..30 включительно
- * mainFunc(2, 5, cbPow) → 32
- * mainFunc(2, 5, cbAdd) → 7
- * mainFunc(2, 5, 'not a func') → false
- */
-
-// console.log(mainFunc(2, 5, cbRandom)); // целые числа в диапазоне 2..5
-
-// console.log(mainFunc(2, 5, cbPow)); // 32
-
-// console.log(mainFunc(2, 5, cbAdd)); // 7
-
-// console.log(mainFunc(2, 5, 'not a func')); // false
+console.log(mainFunc(2, 5, cbRandom));
+console.log(mainFunc(2, 5, cbPow));
+console.log(mainFunc(2, 5, cbAdd));
+console.log(mainFunc(2, 5, 'not a func'));
